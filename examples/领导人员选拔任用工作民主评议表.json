@@ -1,0 +1,596 @@
+{
+  "formInfo": {
+    "title": "领导人员选拔任用工作民主评议表",
+    "organization": "国网浙江省电力有限公司舟山供电公司",
+    "period": "2024",
+    "formCode": "A1",
+    "qrCode": true
+  },
+  "header": {
+    "type": "hierarchical",
+    "columns": [
+      {
+        "id": "content",
+        "title": "评议内容",
+        "type": "text",
+        "width": "60%",
+        "align": "left",
+        "rowspan": 2
+      },
+      {
+        "id": "result",
+        "title": "评议结果",
+        "type": "text",
+        "width": "40%",
+        "align": "center",
+        "colspan": 4
+      },
+      {
+        "id": "good",
+        "title": "好",
+        "type": "radio",
+        "width": "10%",
+        "align": "center",
+        "parentId": "result"
+      },
+      {
+        "id": "better",
+        "title": "较好",
+        "type": "radio",
+        "width": "10%",
+        "align": "center",
+        "parentId": "result"
+      },
+      {
+        "id": "normal",
+        "title": "一般",
+        "type": "radio",
+        "width": "10%",
+        "align": "center",
+        "parentId": "result"
+      },
+      {
+        "id": "poor",
+        "title": "差",
+        "type": "radio",
+        "width": "10%",
+        "align": "center",
+        "parentId": "result"
+      }
+    ]
+  },
+  "body": {
+    "type": "fixed",
+    "rows": [
+      {
+        "id": "row1",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "1. 对本单位领导人员选拔任用工作的总体评价",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "good",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "better",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "normal",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row2",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "2. 对本单位领导人员全方位管理和经常性监督情况的评价",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "good",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "better",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "normal",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row3",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "3. 对上一年度评议反馈问题整改情况的评价",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "good",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "better",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "normal",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row4",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "4. 您对本单位执行领导人员选拔任用工作政策法规情况的看法",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "good",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "better",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "normal",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row5",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "5. 您对本单位整治用人上不正之风工作的看法",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "good",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "better",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "normal",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row6",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "6. 您对本单位深化领导人员人事制度改革的看法",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "good",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "better",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "normal",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row7",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "7. 您对本单位年轻领导人员队伍建设工作的看法",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "good",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "better",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "normal",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row8",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "8. 您认为本单位领导人员选拔任用工作存在的主要问题是什么？<br>（可多选，如认为无问题也可不选）",
+            "type": "text",
+            "colspan": 5,
+            "readonly": true
+          }
+        ]
+      },
+      {
+        "id": "row9",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "(1) 聚焦落实党中央要求和本单位职责使命加强领导班子和领导人员队伍建设不够",
+            "type": "text",
+            "colspan": 3,
+            "readonly": true
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "checkbox",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row10",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "(2) 领导人员队伍建设统筹谋划不够、领导人员队伍结构不优",
+            "type": "text",
+            "colspan": 3,
+            "readonly": true
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "checkbox",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row11",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "(3) 领导人员队伍能力素质不适应工作要求",
+            "type": "text",
+            "colspan": 3,
+            "readonly": true
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "checkbox",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row12",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "(4) 领导人员队伍精神状态不佳或斗争精神不足",
+            "type": "text",
+            "colspan": 3,
+            "readonly": true
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "checkbox",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row13",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "(5) 选人用人突出政治标准不够，严把政治关、廉洁关不到位",
+            "type": "text",
+            "colspan": 3,
+            "readonly": true
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "checkbox",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row14",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "(6) 选人用人注重工作实绩、群众公认不够",
+            "type": "text",
+            "colspan": 3,
+            "readonly": true
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "checkbox",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row15",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "(7) 激励担当作为有差距，推进领导人员能上能下不力",
+            "type": "text",
+            "colspan": 3,
+            "readonly": true
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "checkbox",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row16",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "(8) 选人用人落实民主集中制不到位，存在"个人说了算"",
+            "type": "text",
+            "colspan": 3,
+            "readonly": true
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "checkbox",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row17",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "(9) 坚持五湖四海、任人唯贤不够，存在任人唯亲、搞小圈子等不正之风",
+            "type": "text",
+            "colspan": 3,
+            "readonly": true
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "checkbox",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row18",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "(10) 执行领导人员选拔任用政策和程序不规范",
+            "type": "text",
+            "colspan": 3,
+            "readonly": true
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "checkbox",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row19",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "(11) 对"一把手"、关键岗位等管理监督不够严格，存在薄弱环节",
+            "type": "text",
+            "colspan": 3,
+            "readonly": true
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "checkbox",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row20",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "(12) 公司选人用人专项检查反馈问题整改落实不到位",
+            "type": "text",
+            "colspan": 3,
+            "readonly": true
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "checkbox",
+            "readonly": false
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "notes": [
+      "注：第1-8项请在所选项目后面的方框内划圈(如[〇])。"
+    ]
+  },
+  "validation": {
+    "rules": [
+      {
+        "type": "custom",
+        "field": "radio_group",
+        "message": "每行只能选择一个选项",
+        "condition": "exclusive_selection"
+      }
+    ]
+  }
+}

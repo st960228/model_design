@@ -1,0 +1,1257 @@
+{
+  "formInfo": {
+    "title": "领导人员任期综合考核测评表",
+    "organization": "国网浙江省电力有限公司舟山供电公司",
+    "period": "2022-2024年",
+    "formCode": "A",
+    "qrCode": true
+  },
+  "header": {
+    "type": "hierarchical",
+    "columns": [
+      {
+        "id": "name",
+        "title": "姓名",
+        "type": "text",
+        "width": "8%",
+        "align": "center",
+        "rowspan": 2
+      },
+      {
+        "id": "comprehensive",
+        "title": "综合评价",
+        "type": "text",
+        "width": "32%",
+        "align": "center",
+        "colspan": 4
+      },
+      {
+        "id": "excellent",
+        "title": "优秀",
+        "type": "radio",
+        "width": "8%",
+        "align": "center",
+        "parentId": "comprehensive"
+      },
+      {
+        "id": "qualified",
+        "title": "称职",
+        "type": "radio",
+        "width": "8%",
+        "align": "center",
+        "parentId": "comprehensive"
+      },
+      {
+        "id": "basically_qualified",
+        "title": "基本称职",
+        "type": "radio",
+        "width": "8%",
+        "align": "center",
+        "parentId": "comprehensive"
+      },
+      {
+        "id": "unqualified",
+        "title": "不称职",
+        "type": "radio",
+        "width": "8%",
+        "align": "center",
+        "parentId": "comprehensive"
+      },
+      {
+        "id": "political",
+        "title": "政治过硬",
+        "type": "text",
+        "width": "15%",
+        "align": "center",
+        "rowspan": 2,
+        "description": "对党忠诚、政治能力和履行正确的政绩观情况"
+      },
+      {
+        "id": "ability",
+        "title": "本领过硬",
+        "type": "text",
+        "width": "15%",
+        "align": "center",
+        "rowspan": 2,
+        "description": "统筹协调、科学决策和履职绩效情况"
+      },
+      {
+        "id": "responsibility",
+        "title": "担当过硬",
+        "type": "text",
+        "width": "15%",
+        "align": "center",
+        "rowspan": 2,
+        "description": "攻坚克难和开拓创新情况"
+      },
+      {
+        "id": "style",
+        "title": "作风过硬",
+        "type": "text",
+        "width": "15%",
+        "align": "center",
+        "rowspan": 2,
+        "description": "发扬民主和深入基层情况"
+      },
+      {
+        "id": "integrity",
+        "title": "廉洁过硬",
+        "type": "text",
+        "width": "15%",
+        "align": "center",
+        "rowspan": 2,
+        "description": "清正廉洁和一岗双责情况"
+      }
+    ]
+  },
+  "body": {
+    "type": "fixed",
+    "rows": [
+      {
+        "id": "row1",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "汪宇怀",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "excellent",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "unqualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "political",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "ability",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "responsibility",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "style",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "integrity",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row2",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "虞昉",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "excellent",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "unqualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "political",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "ability",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "responsibility",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "style",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "integrity",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row3",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "周波达",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "excellent",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "unqualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "political",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "ability",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "responsibility",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "style",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "integrity",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row4",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "张平",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "excellent",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "unqualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "political",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "ability",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "responsibility",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "style",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "integrity",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row5",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "王广",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "excellent",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "unqualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "political",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "ability",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "responsibility",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "style",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "integrity",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row6",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "梁帅伟",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "excellent",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "unqualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "political",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "ability",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "responsibility",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "style",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "integrity",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row7",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "山托",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "excellent",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "unqualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "political",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "ability",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "responsibility",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "style",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "integrity",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row8",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "胡俊华",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "excellent",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "unqualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "political",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "ability",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "responsibility",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "style",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "integrity",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row9",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "石礁",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "excellent",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "unqualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "political",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "ability",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "responsibility",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "style",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "integrity",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row10",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "富东",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "excellent",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_qualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "unqualified",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "political",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "ability",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "responsibility",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "style",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          },
+          {
+            "columnId": "integrity",
+            "value": "",
+            "type": "select",
+            "readonly": false,
+            "options": [
+              {"value": "A", "label": "[A]"},
+              {"value": "B", "label": "[B]"},
+              {"value": "C", "label": "[C]"},
+              {"value": "D", "label": "[D]"}
+            ]
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row11",
+        "type": "empty",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "excellent",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "qualified",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "basically_qualified",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "unqualified",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "political",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "ability",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "responsibility",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "style",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "integrity",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          }
+        ]
+      },
+      {
+        "id": "row12",
+        "type": "empty",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "excellent",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "qualified",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "basically_qualified",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "unqualified",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "political",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "ability",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "responsibility",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "style",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "integrity",
+            "value": "",
+            "type": "text",
+            "readonly": true
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "notes": [
+      "1. 副职中，评价为"优秀"的最多可选2人，多选将视为无效票。",
+      "2. 政治、本领、担当、作风、廉洁过硬评价中，A为表现好10分；B为表现较好8分；C为表现一般6分；D为表现较差4分。",
+      "3. 每一栏目各选项中只能选一项，请在相应选项括号内划圈(如[〇])。"
+    ]
+  },
+  "validation": {
+    "rules": [
+      {
+        "type": "custom",
+        "field": "excellent",
+        "message": "副职中，评价为"优秀"的最多可选2人",
+        "condition": "max_count:2"
+      },
+      {
+        "type": "custom",
+        "field": "comprehensive_evaluation",
+        "message": "每一栏目各选项中只能选一项",
+        "condition": "exclusive_selection"
+      }
+    ]
+  }
+}

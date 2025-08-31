@@ -1,0 +1,433 @@
+{
+  "formInfo": {
+    "title": "优秀年轻领导人员会议推荐票",
+    "organization": "国网舟山供电公司",
+    "period": "2024年10月",
+    "formCode": "A",
+    "qrCode": false
+  },
+  "header": {
+    "type": "hierarchical",
+    "columns": [
+      {
+        "id": "project",
+        "title": "项目",
+        "type": "text",
+        "width": "10%",
+        "align": "center",
+        "colspan": 2,
+        "rowspan": 1
+      },
+      {
+        "id": "project_detail",
+        "title": "项目详情",
+        "type": "text",
+        "width": "15%",
+        "align": "left",
+        "parentId": "project"
+      },
+      {
+        "id": "name",
+        "title": "姓名",
+        "type": "input",
+        "width": "15%",
+        "align": "center"
+      },
+      {
+        "id": "position",
+        "title": "职务",
+        "type": "input",
+        "width": "15%",
+        "align": "center"
+      },
+      {
+        "id": "code",
+        "title": "对应编码（请务必选择名册中的四位编码）",
+        "type": "select",
+        "width": "45%",
+        "align": "left",
+        "options": [
+          {"value": "0", "label": "[0]"},
+          {"value": "1", "label": "[1]"},
+          {"value": "2", "label": "[2]"},
+          {"value": "3", "label": "[3]"},
+          {"value": "4", "label": "[4]"},
+          {"value": "5", "label": "[5]"},
+          {"value": "6", "label": "[6]"},
+          {"value": "7", "label": "[7]"},
+          {"value": "8", "label": "[8]"},
+          {"value": "9", "label": "[9]"}
+        ]
+      }
+    ]
+  },
+  "body": {
+    "type": "mixed",
+    "groups": [
+      {
+        "id": "level3_deputy",
+        "title": "三级副职",
+        "description": "1972年以后出生(77后不少于1人, 重点考虑80后)",
+        "rowCount": 4,
+        "constraints": {
+          "maxSelections": 4,
+          "minSelections": 0
+        }
+      },
+      {
+        "id": "level4_chief_1977",
+        "title": "四级正职",
+        "description": "1977年以后出生(特别优秀可适当放宽，不超过1人)",
+        "rowCount": 4,
+        "constraints": {
+          "maxSelections": 4,
+          "minSelections": 0
+        }
+      },
+      {
+        "id": "level4_chief_1983",
+        "title": "四级正职",
+        "description": "1983年以后出生",
+        "rowCount": 3,
+        "constraints": {
+          "maxSelections": 3,
+          "minSelections": 0
+        }
+      }
+    ],
+    "rows": [
+      {
+        "id": "row1",
+        "type": "data",
+        "group": "level3_deputy",
+        "cells": [
+          {
+            "columnId": "project",
+            "value": "三级副职",
+            "type": "text",
+            "rowspan": 4,
+            "readonly": true
+          },
+          {
+            "columnId": "project_detail",
+            "value": "1972年以后出生<br>(77后不少于1人, 重点考虑80后)",
+            "type": "text",
+            "rowspan": 4,
+            "readonly": true
+          },
+          {
+            "columnId": "name",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "position",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "code",
+            "value": "",
+            "type": "select",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row2",
+        "type": "data",
+        "group": "level3_deputy",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "position",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "code",
+            "value": "",
+            "type": "select",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row3",
+        "type": "data",
+        "group": "level3_deputy",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "position",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "code",
+            "value": "",
+            "type": "select",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row4",
+        "type": "data",
+        "group": "level3_deputy",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "position",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "code",
+            "value": "",
+            "type": "select",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row5",
+        "type": "data",
+        "group": "level4_chief_1977",
+        "cells": [
+          {
+            "columnId": "project",
+            "value": "四级正职",
+            "type": "text",
+            "rowspan": 7,
+            "readonly": true
+          },
+          {
+            "columnId": "project_detail",
+            "value": "1977年以后出生<br>(特别优秀可适当放宽，不超过1人)",
+            "type": "text",
+            "rowspan": 4,
+            "readonly": true
+          },
+          {
+            "columnId": "name",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "position",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "code",
+            "value": "",
+            "type": "select",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row6",
+        "type": "data",
+        "group": "level4_chief_1977",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "position",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "code",
+            "value": "",
+            "type": "select",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row7",
+        "type": "data",
+        "group": "level4_chief_1977",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "position",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "code",
+            "value": "",
+            "type": "select",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row8",
+        "type": "data",
+        "group": "level4_chief_1977",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "position",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "code",
+            "value": "",
+            "type": "select",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row9",
+        "type": "data",
+        "group": "level4_chief_1983",
+        "cells": [
+          {
+            "columnId": "project_detail",
+            "value": "1983年以后出生",
+            "type": "text",
+            "rowspan": 3,
+            "readonly": true
+          },
+          {
+            "columnId": "name",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "position",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "code",
+            "value": "",
+            "type": "select",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row10",
+        "type": "data",
+        "group": "level4_chief_1983",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "position",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "code",
+            "value": "",
+            "type": "select",
+            "readonly": false
+          }
+        ]
+      },
+      {
+        "id": "row11",
+        "type": "data",
+        "group": "level4_chief_1983",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "position",
+            "value": "",
+            "type": "input",
+            "readonly": false
+          },
+          {
+            "columnId": "code",
+            "value": "",
+            "type": "select",
+            "readonly": false
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "notes": [
+      "1. 人选每栏限填一人，人选不得重复，可根据您掌握的情况少填或不填，多填或重复填写将作为废票。",
+      "2. 请按领导人员名册填写姓名和职务，并在对应编码处划圈（如 [〇]）。"
+    ]
+  },
+  "validation": {
+    "rules": [
+      {
+        "type": "custom",
+        "field": "code",
+        "message": "人选不得重复",
+        "condition": "unique"
+      },
+      {
+        "type": "custom",
+        "field": "name",
+        "message": "每栏限填一人",
+        "condition": "one_per_row"
+      }
+    ]
+  }
+}

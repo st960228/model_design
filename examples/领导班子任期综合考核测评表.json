@@ -1,0 +1,270 @@
+{
+  "formInfo": {
+    "title": "领导班子任期综合考核测评表",
+    "organization": "国网浙江省电力有限公司舟山供电公司",
+    "period": "2022-2024年",
+    "formCode": "A",
+    "qrCode": true
+  },
+  "header": {
+    "type": "hierarchical",
+    "columns": [
+      {
+        "id": "indicator",
+        "title": "考核指标",
+        "type": "text",
+        "width": "20%",
+        "align": "center",
+        "rowspan": 2
+      },
+      {
+        "id": "content",
+        "title": "考评内容",
+        "type": "text",
+        "width": "30%",
+        "align": "left",
+        "rowspan": 2
+      },
+      {
+        "id": "evaluation",
+        "title": "考核评价",
+        "type": "text",
+        "width": "50%",
+        "align": "center",
+        "colspan": 4
+      },
+      {
+        "id": "good",
+        "title": "好(10分)",
+        "type": "radio",
+        "width": "12.5%",
+        "align": "center",
+        "parentId": "evaluation"
+      },
+      {
+        "id": "better",
+        "title": "较好(8分)",
+        "type": "radio",
+        "width": "12.5%",
+        "align": "center",
+        "parentId": "evaluation"
+      },
+      {
+        "id": "normal",
+        "title": "一般(6分)",
+        "type": "radio",
+        "width": "12.5%",
+        "align": "center",
+        "parentId": "evaluation"
+      },
+      {
+        "id": "poor",
+        "title": "较差(4分)",
+        "type": "radio",
+        "width": "12.5%",
+        "align": "center",
+        "parentId": "evaluation"
+      }
+    ]
+  },
+  "body": {
+    "type": "fixed",
+    "rows": [
+      {
+        "id": "row1",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "indicator",
+            "value": "政治素质优",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "content",
+            "value": "政治方面、担当作为和党的建设情况",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "good",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "better",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "normal",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row2",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "indicator",
+            "value": "整体功能优",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "content",
+            "value": "发扬民主和班子运行情况",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "good",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "better",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "normal",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row3",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "indicator",
+            "value": "工作业绩优",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "content",
+            "value": "改革创新和强基固本情况",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "good",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "better",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "normal",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row4",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "indicator",
+            "value": "作风形象优",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "content",
+            "value": "联系群众、选人用人和廉洁自律情况",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "good",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "better",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "normal",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          },
+          {
+            "columnId": "poor",
+            "value": "",
+            "type": "radio",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      }
+    ]
+  },
+  "footer": {
+    "notes": [
+      "注：每一栏目各选项中只能选择一项，请在相应选项括号内划圈(如[〇])。"
+    ]
+  },
+  "validation": {
+    "rules": [
+      {
+        "type": "custom",
+        "field": "evaluation",
+        "message": "每一栏目各选项中只能选择一项",
+        "condition": "exclusive_selection"
+      }
+    ]
+  }
+}
