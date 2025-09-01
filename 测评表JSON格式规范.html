@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测评表JSON格式规范</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'SimSun', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            background-color: white;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .layout {
+            display: flex;
+            min-height: calc(100vh - 120px);
+            width: 100%;
+        }
+        
+        .sidebar {
+            width: 280px;
+            background-color: #f8f9fa;
+            border-right: 1px solid #dee2e6;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 40px 30px;
+            max-width: calc(100vw - 280px);
+        }
+        
+        .toc {
+            background-color: white;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .toc h3 {
+            color: #495057;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+        
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .toc li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-size: 12px;
+        }
+        
+        .toc a {
+            color: #495057;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 14px;
+            line-height: 1.4;
+            display: block;
+            padding: 4px 0;
+        }
+        
+        .toc a:hover {
+            color: #3498db;
+            background-color: #e3f2fd;
+            border-radius: 4px;
+            padding-left: 8px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            position: relative;
+        }
+        
+        .section h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 50px;
+            height: 3px;
+            background-color: #e74c3c;
+        }
+        
+        .description {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #17a2b8;
+        }
+        
+        .code-block {
+            background-color: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #e3f2fd;
+        }
+        
+        .example-section {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .example-section h4 {
+            color: #856404;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.3em;
+        }
+        
+        .example-comparison {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        
+        .example-image {
+            flex: 1;
+            text-align: center;
+            width: 50%;
+        }
+        
+        .example-image img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .example-json {
+            flex: 1;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .example-json h5 {
+            color: #495057;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            text-align: center;
+        }
+        
+        .json-content {
+            background-color: #f7fafc;
+            color: #2d3748;
+            border-radius: 6px;
+            padding: 15px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            flex: 1;
+            overflow-y: auto;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .json-content pre {
+            margin: 0;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #2d3748;
+            background-color: transparent;
+        }
+        
+        .json-collapsible {
+            cursor: pointer;
+            color: #63b3ed;
+            font-weight: bold;
+        }
+        
+        .json-collapsible:hover {
+            color: #90cdf4;
+        }
+        
+        .json-collapsible::before {
+            content: '▶';
+            margin-right: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .json-collapsible.expanded::before {
+            transform: rotate(90deg);
+        }
+        
+        .json-collapsed {
+            display: none;
+        }
+        
+        .json-key {
+            color: #81e6d9;
+        }
+        
+        .json-string {
+            color: #feb2b2;
+        }
+        
+        .json-number {
+            color: #90cdf4;
+        }
+        
+        .json-boolean {
+            color: #fbb6ce;
+        }
+        
+        .json-null {
+            color: #a0aec0;
+        }
+        
+        .note {
+            background-color: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #0c5460;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 20px 15px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .layout {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+                border-right: none;
+                border-bottom: 1px solid #dee2e6;
+            }
+            
+            .main-content {
+                padding: 20px 15px;
+                max-width: 100vw;
+            }
+            
+            .code-block {
+                font-size: 12px;
+                padding: 15px;
+            }
+            
+            .example-comparison {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .example-image, .example-json {
+                flex: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>测评表JSON格式规范</h1>
+            <p>用于描述各类测评表的标准化JSON格式</p>
+        </div>
+        
+        <div class="layout">
+            <div class="sidebar">
+                <div class="toc">
+                    <h3>目录</h3>
+                    <ul>
+                        <li><a href="#overview">概述</a></li>
+                        <li><a href="#structure">整体结构</a></li>
+                        <li><a href="#forminfo">formInfo - 表单基本信息</a></li>
+                        <li><a href="#header">header - 表头定义</a></li>
+                        <li><a href="#body">body - 表格主体</a></li>
+                        <li><a href="#footer">footer - 页脚说明</a></li>
+                        <li><a href="#validation">validation - 验证规则</a></li>
+                        <li><a href="#examples">完整示例</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="main-content">
+                <div class="section" id="overview">
+                    <h2>概述</h2>
+                    <div class="description">
+                        本文档定义了用于描述各类测评表的标准化JSON格式。该格式支持构建不同类型的测评表。
+                    </div>
+                </div>
+
+                <div class="section" id="structure">
+                    <h2>整体结构</h2>
+                    <div class="code-block">
+{
+  "version": "1.0.0",
+  "formInfo": { ... },
+  "header": { ... },
+  "body": { ... },
+  "footer": { ... },
+  "validation": { ... }
+}
+                    </div>
+                </div>
+
+                <div class="section" id="forminfo">
+                    <h2>formInfo - 表单基本信息</h2>
+                    <div class="description">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>字段名</th>
+                                    <th>类型</th>
+                                    <th>必填</th>
+                                    <th>说明</th>
+                                    <th>示例</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>title</td>
+                                    <td>string</td>
+                                    <td>是</td>
+                                    <td>表单标题</td>
+                                    <td>"领导人员任期综合考核测评表"</td>
+                                </tr>
+                                <tr>
+                                    <td>organization</td>
+                                    <td>string</td>
+                                    <td>是</td>
+                                    <td>组织单位名称</td>
+                                    <td>"国网浙江省电力有限公司舟山供电公司"</td>
+                                </tr>
+                                <tr>
+                                    <td>period</td>
+                                    <td>string</td>
+                                    <td>是</td>
+                                    <td>考核/评议期间</td>
+                                    <td>"2022-2024年"</td>
+                                </tr>
+                                <tr>
+                                    <td>formCode</td>
+                                    <td>string</td>
+                                    <td>是</td>
+                                    <td>表单编码</td>
+                                    <td>"A"</td>
+                                </tr>
+                                <tr>
+                                    <td>qrCode</td>
+                                    <td>boolean</td>
+                                    <td>否</td>
+                                    <td>是否显示二维码</td>
+                                    <td>true/false</td>
+                                </tr>
+                                <tr>
+                                    <td>selections</td>
+                                    <td>object</td>
+                                    <td>否</td>
+                                    <td>选择项定义集合</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>可选项描述</h3>
+                        <p>选择项用于定义表单中所有可能用到的选择项，避免在单元格中重复定义。每个选择项包含一个选项数组和一个多选标志。</p>
+                        <div class="code-block">
+                            <pre><code class="json">{
+  "selectOne": {
+    "options": [
+      {"value": "A", "label": "[A]"},
+      {"value": "B", "label": "[B]"},
+      {"value": "C", "label": "[C]"},
+      {"value": "D", "label": "[D]"}
+    ],
+    "multiple": "false"
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id="header">
+                    <h2>header - 表头定义</h2>
+                    <div class="description">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>字段名</th>
+                                    <th>类型</th>
+                                    <th>必填</th>
+                                    <th>说明</th>
+                                    <th>可选项</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>string</td>
+                                    <td>是</td>
+                                    <td>表头类型</td>
+                                    <td>"simple[简单表头]", "hierarchical[层级表头]"</td>
+                                </tr>
+                                <tr>
+                                    <td>columns</td>
+                                    <td>array</td>
+                                    <td>是</td>
+                                    <td>列定义数组</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>columns 具体内容描述</h3>
+                        <p>每个列定义包含列的唯一标识符、标题、宽度、对齐方式等信息。对于层次表头，还可以定义跨行和跨列。</p>
+                        <div class="code-block">
+                            <pre><code class="json">[
+  {
+    "id": "name", // 列唯一标识符
+    "title": "姓名", // 列标题
+    "width": "8%", // 列宽度
+    "align": "center", // 对齐方式
+    "rowspan": 2 // 跨行数
+  },
+  {
+    "id": "comprehensive", // 列唯一标识符
+    "title": "综合评价", // 列标题
+    "width": "32%", // 列宽度
+    "align": "center", // 对齐方式
+    "colspan": 4 // 跨列数
+  }
+]</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id="body">
+                    <h2>body - 表格主体</h2>
+                    <div class="description">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>字段名</th>
+                                    <th>类型</th>
+                                    <th>必填</th>
+                                    <th>说明</th>
+                                    <th>可选项</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>string</td>
+                                    <td>是</td>
+                                    <td>主体类型</td>
+                                    <td>"fixed[固定行数]"</td>
+                                </tr>
+                                <tr>
+                                    <td>rows</td>
+                                    <td>array</td>
+                                    <td>是</td>
+                                    <td>行数据数组</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>rows 具体内容描述</h3>
+                        <p>每个行定义包含行的唯一标识符、类型、单元格数组等信息。行类型可以是数据行或空行。</p>
+                        <div class="code-block">
+                            <pre><code class="json">[
+  {
+    "id": "row1", // 行唯一标识符
+    "type": "data", // 行类型：data[数据行] empty[空行]
+    "cells": [
+      {
+        "columnId": "name", // 对应列ID
+        "value": "张三", // 单元格值
+        "type": "text" // 单元格类型
+      },
+      {
+        "columnId": "evaluation", // 对应列ID
+        "value": "", // 单元格值
+        "type": "select", // 单元格类型：text[文本] input[输入框] select[选择器]
+        "selectRef": "selectOne" // 选择项引用 引用formInfo.selections中的键名 selectOne （全部选项） 或 selectOne[1]（索引）
+      }
+    ]
+  }
+]</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id="footer">
+                    <h2>footer - 页脚说明</h2>
+                    <div class="description">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>字段名</th>
+                                    <th>类型</th>
+                                    <th>必填</th>
+                                    <th>说明</th>
+                                    <th>可选项</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>notes</td>
+                                    <td>array</td>
+                                    <td>否</td>
+                                    <td>说明文字数组</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="section" id="validation">
+                    <h2>validation - 验证规则</h2>
+                    <div class="description">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>字段名</th>
+                                    <th>类型</th>
+                                    <th>必填</th>
+                                    <th>说明</th>
+                                    <th>可选项</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rules</td>
+                                    <td>array</td>
+                                    <td>否</td>
+                                    <td>验证规则数组</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="section" id="examples">
+                    <h2>完整示例</h2>
+                    
+                    <div class="example-section">
+                        <h4>领导班子任期综合考核测评表</h4>
+                        <div class="example-comparison">
+                            <div class="example-image">
+                                <img src=".doc/领导班子任期综合考核测评表.jpg" alt="领导班子任期综合考核测评表示例">
+                            </div>
+                            <div class="example-json">
+                              
+                                <div class="json-content">
+                                    <div class="json-collapsible" onclick="toggleJson(this)">完整JSON数据</div>
+                                    <div class="json-collapsed">
+                                        <pre><code class="json">{
+  "version": "1.0.0",
+  "formInfo": {
+    "title": "领导班子任期综合考核测评表",
+    "organization": "国网浙江省电力有限公司舟山供电公司",
+    "period": "2022-2024年",
+    "formCode": "A",
+    "qrCode": true,
+    "selections": {
+      "selectOne": {
+        "options": [
+          {"value": "A", "label": "[A]"},
+          {"value": "B", "label": "[B]"},
+          {"value": "C", "label": "[C]"},
+          {"value": "D", "label": "[D]"}
+        ],
+        "multiple": "false"
+      }
+    }
+  },
+  "header": {
+    "type": "hierarchical",
+    "columns": [
+      {
+        "id": "indicator",
+        "title": "考核指标",
+        "width": "20%",
+        "align": "center",
+        "rowspan": 2
+      },
+      {
+        "id": "content",
+        "title": "考评内容",
+        "width": "30%",
+        "align": "left",
+        "rowspan": 2
+      },
+      {
+        "id": "evaluation",
+        "title": "考核评价",
+        "width": "50%",
+        "align": "center",
+        "colspan": 4
+      }
+    ]
+  },
+  "body": {
+    "type": "fixed",
+    "rows": [
+      {
+        "id": "row1",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "indicator",
+            "value": "政治素质优",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "content",
+            "value": "政治方面、担当作为和党的建设情况",
+            "type": "text",
+            "readonly": true
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "notes": [
+      "注：每一栏目各选项中只能选择一项，请在相应选项括号内划圈(如[〇])。"
+    ]
+  },
+  "validation": {
+    "rules": [
+      {
+        "type": "custom",
+        "field": "evaluation",
+        "message": "每一栏目各选项中只能选择一项",
+        "condition": "exclusive_selection"
+      }
+    ]
+  }
+}</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="example-section">
+                        <h4>领导人员德的考核考察测评</h4>
+                        <div class="example-comparison">
+                            <div class="example-image">
+                                <img src=".doc/领导人员德的考核考察测评.jpg" alt="领导人员德的考核考察测评示例">
+                            </div>
+                            <div class="example-json">
+                               
+                                <div class="json-content">
+                                    <div class="json-collapsible" onclick="toggleJson(this)">完整JSON数据</div>
+                                     <div class="json-collapsed">
+                                        <pre><code class="json">{
+  "version": "1.0.0",
+  "formInfo": {
+    "title": "领导人员德的考核考察测评",
+    "organization": "国网浙江省电力有限公司舟山供电公司",
+    "period": "2024年",
+    "formCode": "1",
+    "qrCode": false
+  },
+  "header": {
+    "type": "simple",
+    "columns": [
+      {
+        "id": "name",
+        "title": "姓名/内容",
+        "width": "8%",
+        "align": "center"
+      },
+      {
+        "id": "issue1",
+        "title": "大局意识差",
+        "width": "7%",
+        "align": "center"
+      },
+      {
+        "id": "issue2",
+        "title": "不讲原则，做老好人",
+        "width": "7%",
+        "align": "center"
+      },
+      {
+        "id": "issue3",
+        "title": "工作责任心不强，执行力差",
+        "width": "7%",
+        "align": "center"
+      }
+    ]
+  },
+  "body": {
+    "type": "fixed",
+    "rows": [
+      {
+        "id": "row1",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "汪宇怀",
+            "type": "text", // 单元格类型：text[文本] input[输入框] select[选择器]
+            "readonly": true
+          },
+          {
+            "columnId": "issue1",
+            "value": "",
+            "type": "input", // 单元格类型：text[文本] input[输入框] select[选择器]
+            "readonly": false
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "notes": [
+      "1、考核对象在德的方面如有以上情况，请在相应栏里画"〇"。",
+      "2、针对上述人员的具体事例，请填写在"需要说明的事项"栏。"
+    ],
+    "additionalFields": [
+      {
+        "id": "notes",
+        "title": "需要说明的事项",
+        "type": "textarea",
+        "required": false
+      }
+    ]
+  },
+  "validation": {
+    "rules": []
+  }
+}</code></pre>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="example-section">
+                        <h4>领导人员任期综合考核测评表</h4>
+                        <div class="example-comparison">
+                            <div class="example-image">
+                                <img src=".doc/领导人员任期综合考核测评表.jpg" alt="领导人员任期综合考核测评表示例">
+                                     </div>
+                            <div class="example-json">
+                                
+                                <div class="json-content">
+                                    <div class="json-collapsible" onclick="toggleJson(this)">完整JSON数据</div>
+                                    <div class="json-collapsed">
+                                        <pre><code class="json">{
+  "version": "1.0.0",
+  "formInfo": {
+    "title": "领导人员任期综合考核测评表",
+    "organization": "国网浙江省电力有限公司舟山供电公司",
+    "period": "2022-2024年",
+    "formCode": "A",
+    "qrCode": true,
+    "selections": {
+      "selectOne": {
+        "options": [
+          {"value": "A", "label": "[A]"},
+          {"value": "B", "label": "[B]"},
+          {"value": "C", "label": "[C]"},
+          {"value": "D", "label": "[D]"}
+        ],
+        "multiple": "false"
+      },
+      "selectTwo": {
+        "options": [
+          {"value": "excellent", "label": "优秀"},
+          {"value": "qualified", "label": "称职"},
+          {"value": "basically_qualified", "label": "基本称职"},
+          {"value": "unqualified", "label": "不称职"}
+        ],
+        "multiple": "false"
+      }
+    }
+  },
+  "header": {
+    "type": "hierarchical",
+    "columns": [
+      {
+        "id": "name",
+        "title": "姓名/指标",
+        "width": "8%",
+        "align": "center",
+        "rowspan": 2
+      },
+      {
+        "id": "comprehensive",
+        "title": "综合评价",
+        "width": "32%",
+        "align": "center",
+        "colspan": 4
+      },
+      {
+        "id": "political",
+        "title": "政治过硬",
+        "width": "15%",
+        "align": "center"
+      }
+    ]
+  },
+  "body": {
+    "type": "fixed",
+    "rows": [
+      {
+        "id": "row1",
+        "type": "data", // 行类型：data[数据行] empty[空行]
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "汪宇怀",
+            "type": "text", // 单元格类型：text[文本] input[输入框] select[选择器]
+            "readonly": true
+          },
+          {
+            "columnId": "excellent",
+            "value": "",
+            "type": "select", // 单元格类型：text[文本] input[输入框] select[选择器]
+            "selectRef": "selectTwo[0]", // 选择项引用 引用formInfo.selections中的键名 selectOne （全部选项） 或 selectOne[1]（索引）
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      }
+    ]
+  },
+  "footer": {
+    "notes": [
+      "1. 副职中，评价为"优秀"的最多可选2人，多选将视为无效票。",
+      "2. 政治、本领、担当、作风、廉洁过硬评价中，A为表现好10分；B为表现较好8分；C为表现一般6分；D为表现较差4分。",
+      "3. 每一栏目各选项中只能选一项，请在相应选项括号内划圈(如[〇])。"
+    ]
+  },
+  "validation": {
+    "rules": [
+      {
+        "type": "custom",
+        "field": "excellent",
+        "message": "副职中，评价为"优秀"的最多可选2人",
+        "condition": "max_count:2"
+      },
+      {
+        "type": "custom",
+        "field": "comprehensive_evaluation",
+        "message": "每一栏目各选项中只能选一项",
+        "condition": "exclusive_selection"
+      }
+    ]
+  }
+}</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="example-section">
+                        <h4>领导人员选拔任用工作民主评议表</h4>
+                        <div class="example-comparison">
+                            <div class="example-image">
+                                <img src=".doc/领导人员选拔任用工作民主评议表.jpg" alt="领导人员选拔任用工作民主评议表示例">
+                            </div>
+                            <div class="example-json">
+                               
+                                <div class="json-content">
+                                    <div class="json-collapsible" onclick="toggleJson(this)">完整JSON数据</div>
+                                    <div class="json-collapsed">
+                                        <pre><code class="json">{
+  "version": "1.0.0",
+  "formInfo": {
+    "title": "领导人员选拔任用工作民主评议表",
+    "organization": "国网浙江省电力有限公司舟山供电公司",
+    "period": "2024",
+    "formCode": "A1",
+    "qrCode": true,
+    "selections": {
+      "selectOne": {
+        "options": [
+          {"value": "1", "label": "好"},
+          {"value": "2", "label": "较好"},
+          {"value": "3", "label": "一般"},
+          {"value": "4", "label": "差"}
+        ],
+        "multiple": "false"
+      },
+      "selectTwo": {
+        "options": [
+          {"value": "1", "label": "（1）聚焦落实党中央要求和本单位职责使命加强领导班子和领导人员队伍建设不够"},
+          {"value": "2", "label": "（2）领导人员队伍建设统筹谋划不够、领导人员队伍结构不优"}
+        ],
+        "multiple": "true"
+      }
+    }
+  },
+  "header": {
+    "type": "hierarchical",
+    "columns": [
+      {
+        "id": "content",
+        "title": "评议内容",
+        "width": "60%",
+        "align": "left",
+        "rowspan": 2
+      },
+      {
+        "id": "result",
+        "title": "评议结果",
+        "width": "40%",
+        "align": "center",
+        "colspan": 4
+      },
+      {
+        "id": "good",
+        "title": "好",
+        "width": "10%",
+        "align": "center",
+        "parentId": "result"
+      }
+    ]
+  },
+  "body": {
+    "type": "fixed",
+    "rows": [
+      {
+        "id": "row1",
+        "type": "data", // 行类型：data[数据行] empty[空行]
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "1. 对本单位领导人员选拔任用工作的总体评价",
+            "type": "text", // 单元格类型：text[文本] input[输入框] select[选择器]
+            "readonly": true
+          },
+          {
+            "columnId": "good",
+            "value": "",
+            "type": "select", // 单元格类型：text[文本] input[输入框] select[选择器]
+            "selectRef": "selectOne[0]", // 选择项引用 引用formInfo.selections中的键名 selectOne （全部选项） 或 selectOne[1]（索引）
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row8",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "content",
+            "value": "8. 您认为本单位领导人员选拔任用工作存在的主要问题是什么？<br>（可多选，如认为无问题也可不选）",
+            "type": "text",
+            "colspan": 5,
+            "readonly": true
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "notes": [
+      "注：第1-8项请在所选项目后面的方框内划圈(如[〇])。"
+    ]
+  },
+  "validation": {
+    "rules": [
+      {
+        "type": "custom",
+        "field": "radio_group",
+        "message": "每行只能选择一个选项",
+        "condition": "exclusive_selection"
+      }
+    ]
+  }
+}</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="example-section">
+                        <h4>新选拔任用领导人员民主评议表</h4>
+                        <div class="example-comparison">
+                            <div class="example-image">
+                                <img src=".doc/新选拔任用领导人员民主评议表.jpg" alt="新选拔任用领导人员民主评议表示例">
+                            </div>
+                            <div class="example-json">
+                                
+                                <div class="json-content">
+                                    <div class="json-collapsible" onclick="toggleJson(this)">完整JSON数据</div>
+                                    <div class="json-collapsed">
+                                        <pre><code class="json">{
+  "version": "1.0.0",
+  "formInfo": {
+    "title": "新选拔任用领导人员民主评议表",
+    "organization": "国网浙江省电力有限公司舟山供电公司",
+    "period": "2024",
+    "formCode": "A1",
+    "qrCode": true,
+    "selections": {
+      "selectOne": {
+        "options": [
+          {"value": "1", "label": "认同"},
+          {"value": "2", "label": "基本认同"},
+          {"value": "3", "label": "不认同"},
+          {"value": "4", "label": "不了解"}
+        ],
+        "multiple": "false"
+      }
+    }
+  },
+  "header": {
+    "type": "hierarchical",
+    "columns": [
+      {
+        "id": "basic_info",
+        "title": "被评议对象的基本情况",
+        "width": "55%",
+        "align": "center",
+        "colspan": 5
+      },
+      {
+        "id": "opinion",
+        "title": "对选拔人员的看法",
+        "width": "45%",
+        "align": "center",
+        "colspan": 4
+      },
+      {
+        "id": "name",
+        "title": "姓名",
+        "width": "11%",
+        "align": "center",
+        "parentId": "basic_info"
+      },
+      {
+        "id": "gender",
+        "title": "性别",
+        "width": "11%",
+        "align": "center",
+        "parentId": "basic_info"
+      }
+    ]
+  },
+  "body": {
+    "type": "fixed",
+    "rows": [
+      {
+        "id": "row1",
+        "type": "data", // 行类型：data[数据行] empty[空行]
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "康纬男",
+            "type": "text", // 单元格类型：text[文本] input[输入框] select[选择器]
+            "readonly": true
+          },
+          {
+            "columnId": "gender",
+            "value": "男",
+            "type": "text", // 单元格类型：text[文本] input[输入框] select[选择器]
+            "readonly": true
+          },
+          {
+            "columnId": "agree",
+            "value": "",
+            "type": "select", // 单元格类型：text[文本] input[输入框] select[选择器]
+            "selectRef": "selectOne[0]", // 选择项引用 引用formInfo.selections中的键名 selectOne （全部选项） 或 selectOne[1]（索引）
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      }
+    ]
+  },
+  "footer": {
+    "notes": [
+      "注：1. 统计范围为上次评议以来至2024年10月31日期间新提拔的正副网级正副职级领导人员和新重用的助理、副总师。",
+      "2. 对所列人员的任用有何看法请在相关项目内划圈(如[〇])。"
+    ]
+  },
+  "validation": {
+    "rules": [
+      {
+        "type": "custom",
+        "field": "radio_group",
+        "message": "每行只能选择一个选项",
+        "condition": "exclusive_selection"
+      }
+    ]
+  }
+}</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="example-section">
+                        <h4>优秀年轻领导人员会议推荐票</h4>
+                        <div class="example-comparison">
+                            <div class="example-image">
+                                <img src=".doc/优秀年轻领导人员会议推荐票.jpg" alt="优秀年轻领导人员会议推荐票示例">
+                            </div>
+                            <div class="example-json">
+                                
+                                <div class="json-content">
+                                    <div class="json-collapsible" onclick="toggleJson(this)">完整JSON数据</div>
+                                    <div class="json-collapsed">
+                                        <pre><code class="json">{
+  "version": "1.0.0",
+  "formInfo": {
+    "title": "优秀年轻领导人员会议推荐票",
+    "organization": "国网舟山供电公司",
+    "period": "2024年10月",
+    "formCode": "A",
+    "qrCode": false,
+    "selections": {
+      "selectOne": {
+        "options": [
+          {"value": "0", "label": "[0]"},
+          {"value": "1", "label": "[1]"},
+          {"value": "2", "label": "[2]"},
+          {"value": "3", "label": "[3]"},
+          {"value": "4", "label": "[4]"},
+          {"value": "5", "label": "[5]"},
+          {"value": "6", "label": "[6]"},
+          {"value": "7", "label": "[7]"},
+          {"value": "8", "label": "[8]"},
+          {"value": "9", "label": "[9]"}
+        ],
+        "multiple": "false"
+      }
+    }
+  },
+  "header": {
+    "type": "simple",
+    "columns": [
+      {
+        "id": "project",
+        "title": "项目",
+        "width": "10%",
+        "align": "center"
+      },
+      {
+        "id": "project_detail",
+        "title": "项目详情",
+        "width": "15%",
+        "align": "left"
+      },
+      {
+        "id": "name",
+        "title": "姓名",
+        "width": "15%",
+        "align": "center"
+      }
+    ]
+  },
+  "body": {
+    "type": "fixed",
+    "rows": [
+      {
+        "id": "row1",
+        "type": "data", // 行类型：data[数据行] empty[空行]
+        "cells": [
+          {
+            "columnId": "project",
+            "value": "三级副职",
+            "type": "text", // 单元格类型：text[文本] input[输入框] select[选择器]
+            "rowspan": 4,
+            "readonly": true
+          },
+          {
+            "columnId": "project_detail",
+            "value": "1972年以后出生<br>(77后不少于1人, 重点考虑80后)",
+            "type": "text", // 单元格类型：text[文本] input[输入框] select[选择器]
+            "rowspan": 4,
+            "readonly": true
+          },
+          {
+            "columnId": "name",
+            "value": "",
+            "type": "input", // 单元格类型：text[文本] input[输入框] select[选择器]
+            "readonly": false
+          },
+          {
+            "columnId": "code",
+            "value": "",
+            "type": "select", // 单元格类型：text[文本] input[输入框] select[选择器]
+            "selectRef": "selectOne", // 选择项引用 引用formInfo.selections中的键名 selectOne （全部选项） 或 selectOne[1]（索引）
+            "readonly": false
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "notes": [
+      "1. 人选每栏限填一人，人选不得重复，可根据您掌握的情况少填或不填，多填或重复填写将作为废票。",
+      "2. 请按领导人员名册填写姓名和职务，并在对应编码处划圈（如 [〇]）。"
+    ]
+  },
+  "validation": {
+    "rules": [
+      {
+        "type": "custom",
+        "field": "code",
+        "message": "人选不得重复",
+        "condition": "unique"
+      },
+      {
+        "type": "custom",
+        "field": "name",
+        "message": "每栏限填一人",
+        "condition": "one_per_row"
+      }
+    ]
+  }
+}</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleJson(element) {
+            const nextElement = element.nextElementSibling;
+            if (nextElement && nextElement.classList.contains('json-collapsed')) {
+                nextElement.classList.remove('json-collapsed');
+                element.classList.add('expanded');
+            } else {
+                nextElement.classList.add('json-collapsed');
+                element.classList.remove('expanded');
+            }
+        }
+        
+        // 调整JSON区域高度以匹配图片高度
+        function adjustJsonHeight() {
+            const images = document.querySelectorAll('.example-image img');
+            const jsonContainers = document.querySelectorAll('.example-json');
+            
+            images.forEach((img, index) => {
+                if (jsonContainers[index]) {
+                    img.onload = function() {
+                        const imgHeight = img.offsetHeight;
+                        jsonContainers[index].style.height = imgHeight + 'px';
+                    };
+                    
+                    // 如果图片已经加载完成
+                    if (img.complete) {
+                        const imgHeight = img.offsetHeight;
+                        jsonContainers[index].style.height = imgHeight + 'px';
+                    }
+                }
+            });
+        }
+        
+        // 页面加载时默认展开第一个部分并调整高度
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstCollapsible = document.querySelector('.json-collapsible');
+            if (firstCollapsible) {
+                toggleJson(firstCollapsible);
+            }
+            
+            // 调整高度
+            adjustJsonHeight();
+            
+            // 窗口大小改变时重新调整
+            window.addEventListener('resize', adjustJsonHeight);
+        });
+    </script>
+</body>
+</html>

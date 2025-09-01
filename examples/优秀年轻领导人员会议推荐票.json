@@ -1,51 +1,13 @@
 {
+  "version": "1.0.0",
   "formInfo": {
     "title": "优秀年轻领导人员会议推荐票",
     "organization": "国网舟山供电公司",
     "period": "2024年10月",
     "formCode": "A",
-    "qrCode": false
-  },
-  "header": {
-    "type": "hierarchical",
-    "columns": [
-      {
-        "id": "project",
-        "title": "项目",
-        "type": "text",
-        "width": "10%",
-        "align": "center",
-        "colspan": 2,
-        "rowspan": 1
-      },
-      {
-        "id": "project_detail",
-        "title": "项目详情",
-        "type": "text",
-        "width": "15%",
-        "align": "left",
-        "parentId": "project"
-      },
-      {
-        "id": "name",
-        "title": "姓名",
-        "type": "input",
-        "width": "15%",
-        "align": "center"
-      },
-      {
-        "id": "position",
-        "title": "职务",
-        "type": "input",
-        "width": "15%",
-        "align": "center"
-      },
-      {
-        "id": "code",
-        "title": "对应编码（请务必选择名册中的四位编码）",
-        "type": "select",
-        "width": "45%",
-        "align": "left",
+    "qrCode": false,
+    "selections": {
+      "selectOne": {
         "options": [
           {"value": "0", "label": "[0]"},
           {"value": "1", "label": "[1]"},
@@ -57,49 +19,52 @@
           {"value": "7", "label": "[7]"},
           {"value": "8", "label": "[8]"},
           {"value": "9", "label": "[9]"}
-        ]
+        ],
+        "multiple": "false"
+      }
+    }
+  },
+  "header": {
+    "type": "simple",
+    "columns": [
+      {
+        "id": "project",
+        "title": "项目",
+        "width": "10%",
+        "align": "center"
+      },
+      {
+        "id": "project_detail",
+        "title": "项目详情",
+        "width": "15%",
+        "align": "left"
+      },
+      {
+        "id": "name",
+        "title": "姓名",
+        "width": "15%",
+        "align": "center"
+      },
+      {
+        "id": "position",
+        "title": "职务",
+        "width": "15%",
+        "align": "center"
+      },
+      {
+        "id": "code",
+        "title": "对应编码（请务必选择名册中的四位编码）",
+        "width": "45%",
+        "align": "left"
       }
     ]
   },
   "body": {
-    "type": "mixed",
-    "groups": [
-      {
-        "id": "level3_deputy",
-        "title": "三级副职",
-        "description": "1972年以后出生(77后不少于1人, 重点考虑80后)",
-        "rowCount": 4,
-        "constraints": {
-          "maxSelections": 4,
-          "minSelections": 0
-        }
-      },
-      {
-        "id": "level4_chief_1977",
-        "title": "四级正职",
-        "description": "1977年以后出生(特别优秀可适当放宽，不超过1人)",
-        "rowCount": 4,
-        "constraints": {
-          "maxSelections": 4,
-          "minSelections": 0
-        }
-      },
-      {
-        "id": "level4_chief_1983",
-        "title": "四级正职",
-        "description": "1983年以后出生",
-        "rowCount": 3,
-        "constraints": {
-          "maxSelections": 3,
-          "minSelections": 0
-        }
-      }
-    ],
+    "type": "fixed",
     "rows": [
       {
         "id": "row1",
         "type": "data",
-        "group": "level3_deputy",
         "cells": [
           {
             "columnId": "project",
@@ -131,6 +96,7 @@
             "columnId": "code",
             "value": "",
             "type": "select",
+            "selectRef": "selectOne",
             "readonly": false
           }
         ]
@@ -138,7 +104,6 @@
       {
         "id": "row2",
         "type": "data",
-        "group": "level3_deputy",
         "cells": [
           {
             "columnId": "name",
@@ -156,6 +121,7 @@
             "columnId": "code",
             "value": "",
             "type": "select",
+            "selectRef": "selectOne",
             "readonly": false
           }
         ]
@@ -163,7 +129,6 @@
       {
         "id": "row3",
         "type": "data",
-        "group": "level3_deputy",
         "cells": [
           {
             "columnId": "name",
@@ -181,6 +146,7 @@
             "columnId": "code",
             "value": "",
             "type": "select",
+            "selectRef": "selectOne",
             "readonly": false
           }
         ]
@@ -188,7 +154,6 @@
       {
         "id": "row4",
         "type": "data",
-        "group": "level3_deputy",
         "cells": [
           {
             "columnId": "name",
@@ -206,6 +171,7 @@
             "columnId": "code",
             "value": "",
             "type": "select",
+            "selectRef": "selectOne",
             "readonly": false
           }
         ]
@@ -213,7 +179,6 @@
       {
         "id": "row5",
         "type": "data",
-        "group": "level4_chief_1977",
         "cells": [
           {
             "columnId": "project",
@@ -245,6 +210,7 @@
             "columnId": "code",
             "value": "",
             "type": "select",
+            "selectRef": "selectOne",
             "readonly": false
           }
         ]
@@ -252,7 +218,6 @@
       {
         "id": "row6",
         "type": "data",
-        "group": "level4_chief_1977",
         "cells": [
           {
             "columnId": "name",
@@ -270,6 +235,7 @@
             "columnId": "code",
             "value": "",
             "type": "select",
+            "selectRef": "selectOne",
             "readonly": false
           }
         ]
@@ -277,7 +243,6 @@
       {
         "id": "row7",
         "type": "data",
-        "group": "level4_chief_1977",
         "cells": [
           {
             "columnId": "name",
@@ -295,6 +260,7 @@
             "columnId": "code",
             "value": "",
             "type": "select",
+            "selectRef": "selectOne",
             "readonly": false
           }
         ]
@@ -302,7 +268,6 @@
       {
         "id": "row8",
         "type": "data",
-        "group": "level4_chief_1977",
         "cells": [
           {
             "columnId": "name",
@@ -320,6 +285,7 @@
             "columnId": "code",
             "value": "",
             "type": "select",
+            "selectRef": "selectOne",
             "readonly": false
           }
         ]
@@ -327,7 +293,6 @@
       {
         "id": "row9",
         "type": "data",
-        "group": "level4_chief_1983",
         "cells": [
           {
             "columnId": "project_detail",
@@ -352,6 +317,7 @@
             "columnId": "code",
             "value": "",
             "type": "select",
+            "selectRef": "selectOne",
             "readonly": false
           }
         ]
@@ -359,7 +325,6 @@
       {
         "id": "row10",
         "type": "data",
-        "group": "level4_chief_1983",
         "cells": [
           {
             "columnId": "name",
@@ -377,6 +342,7 @@
             "columnId": "code",
             "value": "",
             "type": "select",
+            "selectRef": "selectOne",
             "readonly": false
           }
         ]
@@ -384,7 +350,6 @@
       {
         "id": "row11",
         "type": "data",
-        "group": "level4_chief_1983",
         "cells": [
           {
             "columnId": "name",
@@ -402,7 +367,8 @@
             "columnId": "code",
             "value": "",
             "type": "select",
-            "readonly": false
+            "selectRef": "selectOne",
+            "readonly": false          
           }
         ]
       }

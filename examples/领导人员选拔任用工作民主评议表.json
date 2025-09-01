@@ -1,10 +1,39 @@
 {
+  "version": "1.0.0",
   "formInfo": {
     "title": "领导人员选拔任用工作民主评议表",
     "organization": "国网浙江省电力有限公司舟山供电公司",
     "period": "2024",
     "formCode": "A1",
-    "qrCode": true
+    "qrCode": true,
+    "selections": {
+      "selectOne": {
+        "options": [
+          {"value": "1", "label": "好"},
+          {"value": "2", "label": "较好"},
+          {"value": "3", "label": "一般"},
+          {"value": "4", "label": "差"}
+        ],
+        "multiple": "false"
+      },
+      "selectTwo": {
+        "options": [
+          {"value": "1", "label": "（1）聚焦落实党中央要求和本单位职责使命加强领导班子和领导人员队伍建设不够"},
+          {"value": "2", "label": "（2）领导人员队伍建设统筹谋划不够、领导人员队伍结构不优"},
+          {"value": "3", "label": "（3）领导人员队伍能力素质不适应工作要求"},
+          {"value": "4", "label": "（4）领导人员队伍精神状态不佳或斗争精神不足"},
+          {"value": "5", "label": "（5）选人用人突出政治标准不够，严把政治关、廉洁关不到位"},
+          {"value": "6", "label": "（6）选人用人注重工作实绩、群众公认不够"},
+          {"value": "7", "label": "（7）激励担当作为有差距，推进领导人员能上能下不力"},
+          {"value": "8", "label": "（8）选人用人落实民主集中制不到位，存在\"个人说了算\""},
+          {"value": "9", "label": "（9）坚持五湖四海、任人唯贤不够，存在任人唯亲、搞小圈子等不正之风"},
+          {"value": "10", "label": "（10）执行领导人员选拔任用政策和程序不规范"},
+          {"value": "11", "label": "（11）对\"一把手\"、关键岗位等管理监督不够严格，存在薄弱环节"},
+          {"value": "12", "label": "（12）公司选人用人专项检查反馈问题整改落实不到位"}
+        ],
+        "multiple": "true"
+      }
+    }
   },
   "header": {
     "type": "hierarchical",
@@ -12,7 +41,6 @@
       {
         "id": "content",
         "title": "评议内容",
-        "type": "text",
         "width": "60%",
         "align": "left",
         "rowspan": 2
@@ -20,7 +48,6 @@
       {
         "id": "result",
         "title": "评议结果",
-        "type": "text",
         "width": "40%",
         "align": "center",
         "colspan": 4
@@ -28,7 +55,6 @@
       {
         "id": "good",
         "title": "好",
-        "type": "radio",
         "width": "10%",
         "align": "center",
         "parentId": "result"
@@ -36,7 +62,6 @@
       {
         "id": "better",
         "title": "较好",
-        "type": "radio",
         "width": "10%",
         "align": "center",
         "parentId": "result"
@@ -44,7 +69,6 @@
       {
         "id": "normal",
         "title": "一般",
-        "type": "radio",
         "width": "10%",
         "align": "center",
         "parentId": "result"
@@ -52,7 +76,6 @@
       {
         "id": "poor",
         "title": "差",
-        "type": "radio",
         "width": "10%",
         "align": "center",
         "parentId": "result"
@@ -75,25 +98,29 @@
           {
             "columnId": "good",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[0]",
             "readonly": false
           },
           {
             "columnId": "better",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[1]",
             "readonly": false
           },
           {
             "columnId": "normal",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[2]",
             "readonly": false
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[3]",
             "readonly": false
           }
         ],
@@ -114,25 +141,29 @@
           {
             "columnId": "good",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[0]",
             "readonly": false
           },
           {
             "columnId": "better",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[1]",
             "readonly": false
           },
           {
             "columnId": "normal",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[2]",
             "readonly": false
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[3]",
             "readonly": false
           }
         ],
@@ -153,25 +184,29 @@
           {
             "columnId": "good",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[0]",
             "readonly": false
           },
           {
             "columnId": "better",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[1]",
             "readonly": false
           },
           {
             "columnId": "normal",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[2]",
             "readonly": false
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[3]",
             "readonly": false
           }
         ],
@@ -192,25 +227,29 @@
           {
             "columnId": "good",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[0]",
             "readonly": false
           },
           {
             "columnId": "better",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[1]",
             "readonly": false
           },
           {
             "columnId": "normal",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[2]",
             "readonly": false
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[3]",
             "readonly": false
           }
         ],
@@ -231,25 +270,29 @@
           {
             "columnId": "good",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[0]",
             "readonly": false
           },
           {
             "columnId": "better",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[1]",
             "readonly": false
           },
           {
             "columnId": "normal",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[2]",
             "readonly": false
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[3]",
             "readonly": false
           }
         ],
@@ -270,25 +313,29 @@
           {
             "columnId": "good",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[0]",
             "readonly": false
           },
           {
             "columnId": "better",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[1]",
             "readonly": false
           },
           {
             "columnId": "normal",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[2]",
             "readonly": false
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[3]",
             "readonly": false
           }
         ],
@@ -309,25 +356,29 @@
           {
             "columnId": "good",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[0]",
             "readonly": false
           },
           {
             "columnId": "better",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[1]",
             "readonly": false
           },
           {
             "columnId": "normal",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[2]",
             "readonly": false
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[3]",
             "readonly": false
           }
         ],
@@ -356,13 +407,14 @@
             "columnId": "content",
             "value": "(1) 聚焦落实党中央要求和本单位职责使命加强领导班子和领导人员队伍建设不够",
             "type": "text",
-            "colspan": 3,
+            "colspan": 4,
             "readonly": true
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "checkbox",
+            "type": "select",
+            "selectRef": "selectTwo[0]",
             "readonly": false
           }
         ]
@@ -375,13 +427,14 @@
             "columnId": "content",
             "value": "(2) 领导人员队伍建设统筹谋划不够、领导人员队伍结构不优",
             "type": "text",
-            "colspan": 3,
+            "colspan": 4,
             "readonly": true
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "checkbox",
+            "type": "select",
+            "selectRef": "selectTwo[1]",
             "readonly": false
           }
         ]
@@ -394,13 +447,14 @@
             "columnId": "content",
             "value": "(3) 领导人员队伍能力素质不适应工作要求",
             "type": "text",
-            "colspan": 3,
+            "colspan": 4,
             "readonly": true
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "checkbox",
+            "type": "select",
+            "selectRef": "selectTwo[2]",
             "readonly": false
           }
         ]
@@ -413,13 +467,14 @@
             "columnId": "content",
             "value": "(4) 领导人员队伍精神状态不佳或斗争精神不足",
             "type": "text",
-            "colspan": 3,
+            "colspan": 4,
             "readonly": true
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "checkbox",
+            "type": "select",
+            "selectRef": "selectTwo[3]",
             "readonly": false
           }
         ]
@@ -432,13 +487,14 @@
             "columnId": "content",
             "value": "(5) 选人用人突出政治标准不够，严把政治关、廉洁关不到位",
             "type": "text",
-            "colspan": 3,
+            "colspan": 4,
             "readonly": true
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "checkbox",
+            "type": "select",
+            "selectRef": "selectTwo[4]",
             "readonly": false
           }
         ]
@@ -451,13 +507,14 @@
             "columnId": "content",
             "value": "(6) 选人用人注重工作实绩、群众公认不够",
             "type": "text",
-            "colspan": 3,
+            "colspan": 4,
             "readonly": true
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "checkbox",
+            "type": "select",
+            "selectRef": "selectTwo[5]",
             "readonly": false
           }
         ]
@@ -470,13 +527,14 @@
             "columnId": "content",
             "value": "(7) 激励担当作为有差距，推进领导人员能上能下不力",
             "type": "text",
-            "colspan": 3,
+            "colspan": 4,
             "readonly": true
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "checkbox",
+            "type": "select",
+            "selectRef": "selectTwo[6]",
             "readonly": false
           }
         ]
@@ -487,15 +545,16 @@
         "cells": [
           {
             "columnId": "content",
-            "value": "(8) 选人用人落实民主集中制不到位，存在"个人说了算"",
+            "value": "(8) 选人用人落实民主集中制不到位，存在\"个人说了算\"",
             "type": "text",
-            "colspan": 3,
+            "colspan": 4,
             "readonly": true
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "checkbox",
+            "type": "select",
+            "selectRef": "selectTwo[7]",
             "readonly": false
           }
         ]
@@ -508,13 +567,14 @@
             "columnId": "content",
             "value": "(9) 坚持五湖四海、任人唯贤不够，存在任人唯亲、搞小圈子等不正之风",
             "type": "text",
-            "colspan": 3,
+            "colspan": 4,
             "readonly": true
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "checkbox",
+            "type": "select",
+            "selectRef": "selectTwo[8]",
             "readonly": false
           }
         ]
@@ -527,13 +587,14 @@
             "columnId": "content",
             "value": "(10) 执行领导人员选拔任用政策和程序不规范",
             "type": "text",
-            "colspan": 3,
+            "colspan": 4,
             "readonly": true
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "checkbox",
+            "type": "select",
+            "selectRef": "selectTwo[9]",
             "readonly": false
           }
         ]
@@ -544,15 +605,16 @@
         "cells": [
           {
             "columnId": "content",
-            "value": "(11) 对"一把手"、关键岗位等管理监督不够严格，存在薄弱环节",
+            "value": "(11) 对\"一把手\"、关键岗位等管理监督不够严格，存在薄弱环节",
             "type": "text",
-            "colspan": 3,
+            "colspan": 4,
             "readonly": true
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "checkbox",
+            "type": "select",
+            "selectRef": "selectTwo[10]",
             "readonly": false
           }
         ]
@@ -565,13 +627,14 @@
             "columnId": "content",
             "value": "(12) 公司选人用人专项检查反馈问题整改落实不到位",
             "type": "text",
-            "colspan": 3,
+            "colspan": 4,
             "readonly": true
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "checkbox",
+            "type": "select",
+            "selectRef": "selectTwo[11]",
             "readonly": false
           }
         ]

@@ -1,0 +1,727 @@
+{
+  "version": "1.0.0",
+  "formInfo": {
+    "title": "新选拔任用领导人员民主评议表",
+    "organization": "国网浙江省电力有限公司舟山供电公司",
+    "period": "2024",
+    "formCode": "A1",
+    "qrCode": true,
+    "selections": {
+      "selectOne": {
+        "options": [
+          {"value": "1", "label": "认同"},
+          {"value": "2", "label": "基本认同"},
+          {"value": "3", "label": "不认同"},
+          {"value": "4", "label": "不了解"}
+        ],
+        "multiple": "false"
+      }
+    }
+  },
+  "header": {
+    "type": "hierarchical",
+    "columns": [
+      {
+        "id": "basic_info",
+        "title": "被评议对象的基本情况",
+        "width": "55%",
+        "align": "center",
+        "colspan": 5
+      },
+      {
+        "id": "opinion",
+        "title": "对选拔人员的看法",
+        "width": "45%",
+        "align": "center",
+        "colspan": 4
+      },
+      {
+        "id": "name",
+        "title": "姓名",
+        "width": "11%",
+        "align": "center",
+        "parentId": "basic_info"
+      },
+      {
+        "id": "gender",
+        "title": "性别",
+        "width": "11%",
+        "align": "center",
+        "parentId": "basic_info"
+      },
+      {
+        "id": "birth",
+        "title": "出生年月",
+        "width": "11%",
+        "align": "center",
+        "parentId": "basic_info"
+      },
+      {
+        "id": "former_position",
+        "title": "原任职务及任职时间",
+        "width": "11%",
+        "align": "left",
+        "parentId": "basic_info"
+      },
+      {
+        "id": "current_position",
+        "title": "现任职务及任职时间",
+        "width": "11%",
+        "align": "left",
+        "parentId": "basic_info"
+      },
+      {
+        "id": "agree",
+        "title": "认同",
+        "width": "11.25%",
+        "align": "center",
+        "parentId": "opinion"
+      },
+      {
+        "id": "basically_agree",
+        "title": "基本认同",
+        "width": "11.25%",
+        "align": "center",
+        "parentId": "opinion"
+      },
+      {
+        "id": "disagree",
+        "title": "不认同",
+        "width": "11.25%",
+        "align": "center",
+        "parentId": "opinion"
+      },
+      {
+        "id": "unknown",
+        "title": "不了解",
+        "width": "11.25%",
+        "align": "center",
+        "parentId": "opinion"
+      }
+    ]
+  },
+  "body": {
+    "type": "fixed",
+    "rows": [
+      {
+        "id": "row1",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "康纬男",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "gender",
+            "value": "男",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "birth",
+            "value": "1972-10",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "former_position",
+            "value": "建设部三级职员, 2022年8月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "current_position",
+            "value": "副总工程师、建设部主任, 2024年3月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[0]",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[1]",
+            "readonly": false
+          },
+          {
+            "columnId": "disagree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[2]",
+            "readonly": false
+          },
+          {
+            "columnId": "unknown",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[3]",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row2",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "李汉勇",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "gender",
+            "value": "男",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "birth",
+            "value": "1973-06",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "former_position",
+            "value": "普陀供电分公司经理、党委副书记, 2021年8月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "current_position",
+            "value": "安全总监、安全监察部 (应急管理部、保卫部) 主任, 2024年6月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[0]",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[1]",
+            "readonly": false
+          },
+          {
+            "columnId": "disagree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[2]",
+            "readonly": false
+          },
+          {
+            "columnId": "unknown",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[3]",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row3",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "徐良军",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "gender",
+            "value": "男",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "birth",
+            "value": "1985-07",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "former_position",
+            "value": "发展策划部 (碳资产管理办公室) 副主任, 2019年4月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "current_position",
+            "value": "经济技术研究所党支部书记、副所长, 2023年12月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[0]",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[1]",
+            "readonly": false
+          },
+          {
+            "columnId": "disagree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[2]",
+            "readonly": false
+          },
+          {
+            "columnId": "unknown",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[3]",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row4",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "杨烁",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "gender",
+            "value": "男",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "birth",
+            "value": "1982-06",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "former_position",
+            "value": "人力资源部 (党委组织部) 四级职员, 2023年9月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "current_position",
+            "value": "纪委办公室 (审计监管部) 主任、本部党委副书记、纪委书记、工会主席, 2024年2月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[0]",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[1]",
+            "readonly": false
+          },
+          {
+            "columnId": "disagree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[2]",
+            "readonly": false
+          },
+          {
+            "columnId": "unknown",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[3]",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row5",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "冯仰光",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "gender",
+            "value": "男",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "birth",
+            "value": "1983-06",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "former_position",
+            "value": "浙江启明电力集团有限公司四级职员, 2022年2月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "current_position",
+            "value": "浙江启明电力集团有限公司电力建设分公司经理、浙江启明电力集团有限公司舟山作业分公司经理, 2024年5月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[0]",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[1]",
+            "readonly": false
+          },
+          {
+            "columnId": "disagree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[2]",
+            "readonly": false
+          },
+          {
+            "columnId": "unknown",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[3]",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row6",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "秦清城",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "gender",
+            "value": "男",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "birth",
+            "value": "1984-12",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "former_position",
+            "value": "运维检修部副主任, 2021年3月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "current_position",
+            "value": "变电运检中心主任、党总支副书记, 2024年6月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[0]",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[1]",
+            "readonly": false
+          },
+          {
+            "columnId": "disagree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[2]",
+            "readonly": false
+          },
+          {
+            "columnId": "unknown",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[3]",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row7",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "刘黎",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "gender",
+            "value": "女",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "birth",
+            "value": "1987-10",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "former_position",
+            "value": "公司五级专家, 2022年12月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "current_position",
+            "value": "柔直运检中心副主任, 2024年2月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[0]",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[1]",
+            "readonly": false
+          },
+          {
+            "columnId": "disagree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[2]",
+            "readonly": false
+          },
+          {
+            "columnId": "unknown",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[3]",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row8",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "王盛杰",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "gender",
+            "value": "男",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "birth",
+            "value": "1987-12",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "former_position",
+            "value": "公司五级专家、人力资源部 (党委组织部) 干部管理, 2022年12月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "current_position",
+            "value": "浙江启明电力集团有限公司人力资源部主任 (四级副职), 2024年2月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[0]",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[1]",
+            "readonly": false
+          },
+          {
+            "columnId": "disagree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[2]",
+            "readonly": false
+          },
+          {
+            "columnId": "unknown",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[3]",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      },
+      {
+        "id": "row9",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "name",
+            "value": "刘华",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "gender",
+            "value": "男",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "birth",
+            "value": "1982-06",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "former_position",
+            "value": "浙江启明电力集团有限公司战略发展部副主任, 2022年7月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "current_position",
+            "value": "浙江启明电力集团有限公司市场营销部主任 (四级副职), 2024年2月",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[0]",
+            "readonly": false
+          },
+          {
+            "columnId": "basically_agree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[1]",
+            "readonly": false
+          },
+          {
+            "columnId": "disagree",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[2]",
+            "readonly": false
+          },
+          {
+            "columnId": "unknown",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[3]",
+            "readonly": false
+          }
+        ],
+        "validation": {
+          "exclusive": true
+        }
+      }
+    ]
+  },
+  "footer": {
+    "notes": [
+      "注：1. 统计范围为上次评议以来至2024年10月31日期间新提拔的正副网级正副职级领导人员和新重用的助理、副总师。",
+      "2. 对所列人员的任用有何看法请在相关项目内划圈(如[〇])。"
+    ]
+  },
+  "validation": {
+    "rules": [
+      {
+        "type": "custom",
+        "field": "radio_group",
+        "message": "每行只能选择一个选项",
+        "condition": "exclusive_selection"
+      }
+    ]
+  }
+}

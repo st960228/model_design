@@ -1,10 +1,22 @@
 {
+  "version": "1.0.0",
   "formInfo": {
     "title": "领导班子任期综合考核测评表",
     "organization": "国网浙江省电力有限公司舟山供电公司",
     "period": "2022-2024年",
     "formCode": "A",
-    "qrCode": true
+    "qrCode": true,
+    "selections": {
+      "selectOne": {
+        "options": [
+          {"value": "A", "label": "[A]"},
+          {"value": "B", "label": "[B]"},
+          {"value": "C", "label": "[C]"},
+          {"value": "D", "label": "[D]"}
+        ],
+        "multiple": "false"
+      }
+    }
   },
   "header": {
     "type": "hierarchical",
@@ -12,7 +24,6 @@
       {
         "id": "indicator",
         "title": "考核指标",
-        "type": "text",
         "width": "20%",
         "align": "center",
         "rowspan": 2
@@ -20,7 +31,6 @@
       {
         "id": "content",
         "title": "考评内容",
-        "type": "text",
         "width": "30%",
         "align": "left",
         "rowspan": 2
@@ -28,7 +38,6 @@
       {
         "id": "evaluation",
         "title": "考核评价",
-        "type": "text",
         "width": "50%",
         "align": "center",
         "colspan": 4
@@ -36,7 +45,6 @@
       {
         "id": "good",
         "title": "好(10分)",
-        "type": "radio",
         "width": "12.5%",
         "align": "center",
         "parentId": "evaluation"
@@ -44,7 +52,6 @@
       {
         "id": "better",
         "title": "较好(8分)",
-        "type": "radio",
         "width": "12.5%",
         "align": "center",
         "parentId": "evaluation"
@@ -52,7 +59,6 @@
       {
         "id": "normal",
         "title": "一般(6分)",
-        "type": "radio",
         "width": "12.5%",
         "align": "center",
         "parentId": "evaluation"
@@ -60,7 +66,6 @@
       {
         "id": "poor",
         "title": "较差(4分)",
-        "type": "radio",
         "width": "12.5%",
         "align": "center",
         "parentId": "evaluation"
@@ -89,25 +94,29 @@
           {
             "columnId": "good",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[0]",
             "readonly": false
           },
           {
             "columnId": "better",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[1]",
             "readonly": false
           },
           {
             "columnId": "normal",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[2]",
             "readonly": false
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[3]",
             "readonly": false
           }
         ],
@@ -134,25 +143,29 @@
           {
             "columnId": "good",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[0]",
             "readonly": false
           },
           {
             "columnId": "better",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[1]",
             "readonly": false
           },
           {
             "columnId": "normal",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[2]",
             "readonly": false
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[3]",
             "readonly": false
           }
         ],
@@ -179,25 +192,29 @@
           {
             "columnId": "good",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[0]",
             "readonly": false
           },
           {
             "columnId": "better",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[1]",
             "readonly": false
           },
           {
             "columnId": "normal",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[2]",
             "readonly": false
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[3]",
             "readonly": false
           }
         ],
@@ -224,25 +241,29 @@
           {
             "columnId": "good",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[0]",
             "readonly": false
           },
           {
             "columnId": "better",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[1]",
             "readonly": false
           },
           {
             "columnId": "normal",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[2]",
             "readonly": false
           },
           {
             "columnId": "poor",
             "value": "",
-            "type": "radio",
+            "type": "select",
+            "selectRef": "selectOne[3]",
             "readonly": false
           }
         ],

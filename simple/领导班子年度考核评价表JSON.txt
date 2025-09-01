@@ -1,0 +1,119 @@
+{
+  // 修改内容：
+  // 1. options 增加 selections 属性：统一定义选择项【包含 label value score】，避免写死查找选择项得到逻辑
+  // 2. options 增加 statisticsProps 属性：统一定义表单内容绑定字段，方便表单内容统计
+  // 3. tableData 中数据对象增加 uniqueId 属性： 定义表单数据对象的唯一标识，用于定位表单数据
+  // 4. tableData 中数据对象的选项传值定义：单选 "A" 多选 ["A","B","C"]
+  "options": {
+    "title": "领导班子年度考核评价表", // 表名
+    "orgName": "国网浙江省电力有限公司超高压分公司", // 单位
+    "orgid": "单位id",
+    "selections": [
+        "khpj":[ // khpj 是绑定的真实字段【propReal】
+            {"label":"[A]","value":"A","score":"10"},
+            {"label":"[B]","value":"B","score":"8"},
+            {"label":"[C]","value":"C","score":"8"},
+            {"label":"[D]","value":"D","score":"4"}	
+        ]
+    ]
+    "statisticsProps":["khpj"]	
+    "header": [
+      {
+        "label": "考核指标", // 表头名称，手动输入或者列表选择
+        "prop": "khzb", // 列字段
+        "propReal": "khzb", // 真实绑定值的字段
+        "align": "center", // 居中样式
+        "width": 100, // 列宽，可以为空
+        "widthPad": 100, // pad列宽
+        "class": "header1", // 具体样式
+        "type": "文本" // 文本，单选，多选，输入框
+      },
+      {
+        "label": "考评内容", // 表头名称，手动输入或者列表选择
+        "propReal": "kpnr", // 真实绑定值的字段
+        "prop": "kpnr", // 字段
+        "align": "center", // 居中样式
+        "width": 100, // 列宽，可以为空
+        "widthPad": 100, // pad列宽
+        "class": "", // 具体样式
+        "type": "文本" // 文本，单选，多选，输入框
+      },
+      {
+        "label": "考核评价",
+        "propReal": "khpj",
+        "align": "center",
+        "class": "", // 具体样式
+        "children": [
+          {
+            "label": "好（10分）",
+            "propReal": "khpj", // 真实绑定的值
+            "prop": "khpja", // 列名，用来唯一判断
+            "align": "center",
+            "width": 100, // 列宽，可以为空
+            "widthPad": 100, // pad列宽
+            "type": "单选", // 文本，单选，多选，输入框
+            "options": [
+              {
+                "label": "A",
+                "score": "10"
+              }
+            ]
+          },
+          {
+            "label": "较好（8分）",
+            "propReal": "khpj", // 真实绑定的值
+            "prop": "khpjb",
+            "align": "center",
+            "width": 100, // 列宽，可以为空
+            "widthPad": 100, // pad列宽
+            "type": "单选", // 文本，单选，多选，输入框
+            "options": [
+              {
+                "label": "B",
+                "score": "8"
+              }
+            ]
+          },
+          {
+            "label": "一般（6分）",
+            "propReal": "khpj", // 真实绑定的值
+            "prop": "khpjc",
+            "align": "center",
+            "width": 100, // 列宽，可以为空
+            "widthPad": 100, // pad列宽
+            "type": "单选", // 文本，单选，多选，输入框
+            "options": [
+              {
+                "label": "C",
+                "score": "6"
+              }
+            ]
+          },
+          {
+            "label": "较差（4分）",
+            "propReal": "khpj", // 真实绑定的值
+            "prop": "khpjd",
+            "align": "center",
+            "width": 100, // 列宽，可以为空
+            "widthPad": 100, // pad列宽
+            "type": "单选", // 文本，单选，多选，输入框
+            "options": [
+              {
+                "label": "D",
+                "score": "4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "tableData": [
+      {
+        "uniqueId": "Osi86n0pdd532"	
+        "khzb": "政治素质优"
+        "kpnr": "政治方面、担当作为和党的建设情况",
+        "khpj": "A"
+      }
+    ]
+  }
+}

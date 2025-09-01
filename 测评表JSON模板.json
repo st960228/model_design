@@ -1,0 +1,102 @@
+{
+  "version": "1.0.0",
+  "formInfo": {
+    "title": "表单标题",
+    "organization": "组织单位名称",
+    "period": "考核/评议期间",
+    "formCode": "表单编码",
+    "qrCode": false,
+    "selections": {
+      "selectOne": {
+        "options": [
+          {"value": "option1", "label": "选项1"},
+          {"value": "option2", "label": "选项2"},
+          {"value": "option3", "label": "选项3"}
+        ],
+        "multiple": "false"
+      },
+      "selectTwo": {
+        "options": [
+          {"value": "multi1", "label": "多选项1"},
+          {"value": "multi2", "label": "多选项2"},
+          {"value": "multi3", "label": "多选项3"}
+        ],
+        "multiple": "true"
+      }
+    }
+  },
+  "header": {
+    "type": "simple",
+    "columns": [
+      {
+        "id": "column_id",
+        "title": "列标题",
+        "width": "20%",
+        "align": "center"
+      },
+      {
+        "id": "select_example",
+        "title": "选择示例",
+        "width": "30%",
+        "align": "center"
+      }
+    ]
+  },
+  "body": {
+    "type": "fixed",
+    "rows": [
+      {
+        "id": "row1",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "column_id",
+            "value": "单元格值",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "select_example",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectOne[0]"
+          }
+        ]
+      },
+      {
+        "id": "row2",
+        "type": "data",
+        "cells": [
+          {
+            "columnId": "column_id",
+            "value": "多选示例",
+            "type": "text",
+            "readonly": true
+          },
+          {
+            "columnId": "select_example",
+            "value": "",
+            "type": "select",
+            "selectRef": "selectTwo"
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "notes": [
+      "说明文字1",
+      "说明文字2"
+    ]
+  },
+  "validation": {
+    "rules": [
+      {
+        "type": "custom",
+        "field": "field_name",
+        "message": "验证错误提示",
+        "condition": "validation_condition"
+      }
+    ]
+  }
+}

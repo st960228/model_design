@@ -1,4 +1,5 @@
 {
+  "version": "1.0.0",
   "formInfo": {
     "title": "领导人员德的考核考察测评",
     "organization": "国网浙江省电力有限公司舟山供电公司",
@@ -11,99 +12,85 @@
     "columns": [
       {
         "id": "name",
-        "title": "姓名",
-        "type": "text",
+        "title": "姓名/内容",
         "width": "8%",
         "align": "center"
       },
       {
         "id": "issue1",
         "title": "大局意识差",
-        "type": "checkbox",
         "width": "7%",
         "align": "center"
       },
       {
         "id": "issue2",
         "title": "不讲原则，做老好人",
-        "type": "checkbox",
         "width": "7%",
         "align": "center"
       },
       {
         "id": "issue3",
         "title": "工作责任心不强，执行力差",
-        "type": "checkbox",
         "width": "7%",
         "align": "center"
       },
       {
         "id": "issue4",
-        "title": "违反中央"八项规定"精神行为",
-        "type": "checkbox",
+        "title": "违反中央“八项规定”精神行为",
         "width": "7%",
         "align": "center"
       },
       {
         "id": "issue5",
         "title": "存在阅官习气、衙门作风等问题",
-        "type": "checkbox",
         "width": "7%",
         "align": "center"
       },
       {
         "id": "issue6",
         "title": "对个人名利计较较多",
-        "type": "checkbox",
         "width": "7%",
         "align": "center"
       },
       {
         "id": "issue7",
         "title": "以不正当手段获取荣誉、学位等利益",
-        "type": "checkbox",
         "width": "7%",
         "align": "center"
       },
       {
         "id": "issue8",
         "title": "发表、撰写、散布、散播不当言论的小道消息",
-        "type": "checkbox",
         "width": "7%",
         "align": "center"
       },
       {
         "id": "issue9",
         "title": "有夫妻关系不和睦、不孝顺长辈的现象",
-        "type": "checkbox",
         "width": "7%",
         "align": "center"
       },
       {
         "id": "issue10",
         "title": "作风不检点、不注重自身形象",
-        "type": "checkbox",
         "width": "7%",
         "align": "center"
       },
       {
         "id": "issue11",
         "title": "拉帮结派，存在山头主义",
-        "type": "checkbox",
         "width": "7%",
         "align": "center"
       },
       {
         "id": "issue12",
         "title": "消费与正常收入存在较大反差",
-        "type": "checkbox",
         "width": "7%",
         "align": "center"
       },
       {
         "id": "issue13",
         "title": "对亲属和身边工作人员要求不严，为其谋求不正当利益",
-        "type": "checkbox",
         "width": "7%",
         "align": "center"
       }
@@ -125,79 +112,79 @@
           {
             "columnId": "issue1",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue2",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue3",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue4",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue5",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue6",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue7",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue8",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue9",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue10",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue11",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue12",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue13",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           }
         ]
@@ -215,79 +202,79 @@
           {
             "columnId": "issue1",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue2",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue3",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue4",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue5",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue6",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue7",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue8",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue9",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue10",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue11",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue12",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue13",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           }
         ]
@@ -305,79 +292,79 @@
           {
             "columnId": "issue1",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue2",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue3",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue4",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue5",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue6",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue7",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue8",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue9",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue10",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue11",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue12",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue13",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           }
         ]
@@ -395,79 +382,79 @@
           {
             "columnId": "issue1",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue2",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue3",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue4",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue5",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue6",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue7",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue8",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue9",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue10",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue11",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue12",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue13",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           }
         ]
@@ -485,79 +472,79 @@
           {
             "columnId": "issue1",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue2",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue3",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue4",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue5",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue6",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue7",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue8",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue9",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue10",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue11",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue12",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue13",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           }
         ]
@@ -575,79 +562,79 @@
           {
             "columnId": "issue1",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue2",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue3",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue4",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue5",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue6",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue7",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue8",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue9",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue10",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue11",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue12",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue13",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           }
         ]
@@ -665,79 +652,79 @@
           {
             "columnId": "issue1",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue2",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue3",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue4",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue5",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue6",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue7",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue8",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue9",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue10",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue11",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue12",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue13",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           }
         ]
@@ -755,79 +742,79 @@
           {
             "columnId": "issue1",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue2",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue3",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue4",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue5",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue6",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue7",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue8",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue9",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue10",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue11",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue12",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue13",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           }
         ]
@@ -845,79 +832,79 @@
           {
             "columnId": "issue1",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue2",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue3",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue4",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue5",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue6",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue7",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue8",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue9",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue10",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue11",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue12",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           },
           {
             "columnId": "issue13",
             "value": "",
-            "type": "checkbox",
+            "type": "input",
             "readonly": false
           }
         ]
@@ -926,8 +913,8 @@
   },
   "footer": {
     "notes": [
-      "1、考核对象在德的方面如有以上情况，请在相应栏里画"〇"。",
-      "2、针对上述人员的具体事例，请填写在"需要说明的事项"栏。"
+      "1、考核对象在德的方面如有以上情况，请在相应栏里画“〇”。",
+      "2、针对上述人员的具体事例，请填写在“需要说明的事项”栏。"
     ],
     "additionalFields": [
       {
